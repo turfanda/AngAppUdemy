@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 })
 export class Practice2Component {
 
-    name='ali';
+    name = 'ali';
 
-    action(){
+    action() {
         this.name = '';
     }
 

@@ -1,0 +1,5 @@
+<button class="btn btn-danger" (click)="action($event)" [disabled]="name === '' ">
+  Display Details</button>
+<p *ngIf="showHide">asdasdasdasdasdasdasdasdasdasdasdsa</p>
+  <div *ngFor="let stamp of logs; let i = index" [ngStyle]="{backgroundColor:i>4?'red':'transparent'}">{{stamp}}</div>
+
