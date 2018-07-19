@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12" style="text-align: center;margin-top: 30px;">
+      <button class="btn btn-primary" (click)="onGameStart()">StartGame</button>
+      <button class="btn btn-Danger" (click)="onGameEnd()">EndGame</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6" style="text-align: center">
+      <app-odd [value]="number" [clear]="clearArray"></app-odd>
+    </div>
+    <div class="col-xs-6" style="text-align: center">
+      <app-even [value]="number" [clear]="clearArray"></app-even>
+    </div>
+  </div>
+</div>
