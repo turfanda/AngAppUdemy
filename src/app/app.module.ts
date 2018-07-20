@@ -17,6 +17,7 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { GameControlComponent } from './practice4/game-control/game-control.component';
 import { OddComponent } from './practice4/odd/odd.component';
 import { EvenComponent } from './practice4/even/even.component';
+import { DropdownDirective } from './shared/dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { EvenComponent } from './practice4/even/even.component';
     ShoppingEditComponent,
     GameControlComponent,
     OddComponent,
+    DropdownDirective,
     EvenComponent
   ],
   imports: [
