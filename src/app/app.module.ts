@@ -20,6 +20,7 @@ import { OddComponent } from './practice4/odd/odd.component';
 import { EvenComponent } from './practice4/even/even.component';
 import { DropdownDirective } from './shared/dropdown.directive';
 import { Practice5Module } from './practice5/practice5.module';
+import { ShoppingListService } from './shopping-list/shopping-list.service';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,7 @@ import { Practice5Module } from './practice5/practice5.module';
     FormsModule,
     Practice5Module
   ],
-  providers: [],
+  providers: [ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
