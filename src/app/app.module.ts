@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
+
 import { AppComponent } from './app.component';
 import { WarningAlertComponent } from './practice1/warning-alert/warning-alert.component';
 import { SuccessAlertComponent } from './practice1/success-alert/success-alert.component';
@@ -18,6 +19,7 @@ import { GameControlComponent } from './practice4/game-control/game-control.comp
 import { OddComponent } from './practice4/odd/odd.component';
 import { EvenComponent } from './practice4/even/even.component';
 import { DropdownDirective } from './shared/dropdown.directive';
+import { Practice5Module } from './practice5/practice5.module';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,8 @@ import { DropdownDirective } from './shared/dropdown.directive';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    Practice5Module
   ],
   providers: [],
   bootstrap: [AppComponent]
