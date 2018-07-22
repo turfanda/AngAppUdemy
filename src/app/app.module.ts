@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 
+
 import { AppComponent } from './app.component';
 import { WarningAlertComponent } from './practice1/warning-alert/warning-alert.component';
 import { SuccessAlertComponent } from './practice1/success-alert/success-alert.component';
@@ -21,6 +22,12 @@ import { EvenComponent } from './practice4/even/even.component';
 import { DropdownDirective } from './shared/dropdown.directive';
 import { Practice5Module } from './practice5/practice5.module';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
+import { AppRoutingModule } from './app-routing.module';
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
+import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -39,12 +46,15 @@ import { ShoppingListService } from './shopping-list/shopping-list.service';
     GameControlComponent,
     OddComponent,
     DropdownDirective,
-    EvenComponent
+    EvenComponent,
+    RecipeEditComponent,
+    RecipeStartComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    Practice5Module
+    Practice5Module,
+    AppRoutingModule
   ],
   providers: [ShoppingListService],
   bootstrap: [AppComponent]
