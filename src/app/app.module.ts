@@ -25,6 +25,7 @@ import { ShoppingListService } from './shopping-list/shopping-list.service';
 import { AppRoutingModule } from './app-routing.module';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
+import { TDFormComponent } from './practice6/tdform/tdform.component';
 
 
 
@@ -48,7 +49,8 @@ import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.compon
     DropdownDirective,
     EvenComponent,
     RecipeEditComponent,
-    RecipeStartComponent
+    RecipeStartComponent,
+    TDFormComponent
   ],
   imports: [
     BrowserModule,

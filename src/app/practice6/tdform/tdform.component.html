@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <form (ngSubmit)="submitForm(f)" #f="ngForm">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input #email="ngModel" class="form-control" id="email" type="email" name="email" ngModel required email aria-describedby="emailHelpBlock">
+          <small *ngIf="!email.valid && email.touched" id="emailHelpBlock" class="form-text text-muted">
+            email Required
+          </small>
+        </div>
+        <div class="form-group">
+          <label for="email" id="subs">Subscription</label>
+          <select class="form-control" name="subs" id="subs" [ngModel]="'Basic'">
+            <option *ngFor="let sub of subs" value="{{sub}}">{{sub}}</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input #password="ngModel" class="form-control" type="password" id="password" name="password" ngModel required aria-describedby="passwordHelpBlock">
+          <small *ngIf="!password.valid && password.touched" id="passwordHelpBlock" class="form-text text-muted">
+            please enter password
+          </small>
+          <br>
+          <button class="btn btn-primary" [disabled]="!f.valid" type="submit">Submit Form</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div *ngIf="submitted">
+      <p>Email = {{f.value.email}}</p>
+      <p>Subscription = {{f.value.subs}}</p>
+      <p>Password = {{f.value.password}}</p>
+  </div>
+
+</div>
