@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -26,6 +26,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 import { TDFormComponent } from './practice6/tdform/tdform.component';
+import { ReactiveFromComponent } from './practice7/reactive-from/reactive-from.component';
 
 
 
@@ -50,13 +51,15 @@ import { TDFormComponent } from './practice6/tdform/tdform.component';
     EvenComponent,
     RecipeEditComponent,
     RecipeStartComponent,
-    TDFormComponent
+    TDFormComponent,
+    ReactiveFromComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     Practice5Module,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [ShoppingListService],
   bootstrap: [AppComponent]

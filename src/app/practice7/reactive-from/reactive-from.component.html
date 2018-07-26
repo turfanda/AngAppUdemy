@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-4 col-xs-offset-4">
+      <h1>Reactive Form</h1>
+      <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="projectName">Project Name</label>
+          <input type="text" id="projectName" class="form-control" formControlName="projectName">
+          <span class="help-block" *ngIf="!reactiveForm.pending &&!reactiveForm.get('projectName').valid && reactiveForm.get('projectName').touched ">
+            <span class="help-block" *ngIf="reactiveForm.get('projectName').errors['required']">
+              You should enter a name
+            </span>
+            <span class="help-block" *ngIf="reactiveForm.get('projectName').errors['testValidator']">
+              Test is not valid name
+            </span>
+          </span>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" formControlName="email">
+          <span class="help-block" *ngIf="!reactiveForm.get('email').valid && reactiveForm.get('email').touched ">
+              <span class="help-block" *ngIf="reactiveForm.get('email').errors['required']">
+                This filed cant be empty
+              </span>
+              <span class="help-block" *ngIf="reactiveForm.get('email').errors['email']">
+                Enter Valid email
+              </span>
+            </span>
+        </div>
+        <div class="form-group">
+          <label for="status">Project Status</label>
+          <select class="form-control" id="status" formControlName="projectStatus">
+            <option *ngFor="let stat of status" [value]="stat">{{stat}}</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
