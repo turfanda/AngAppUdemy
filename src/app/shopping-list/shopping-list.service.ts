@@ -1,10 +1,10 @@
-import { Ingredient } from '../shared/ingredient.model'
-import { EventEmitter } from '../../../node_modules/@angular/core';
 import { Subject } from '../../../node_modules/rxjs';
+import { Ingredient } from '../shared/ingredient.model';
 
 export class ShoppingListService {
 
     ingChanged = new Subject<Ingredient[]>();
+    editShopListITem = new Subject<number>();
     private Ingredients: Ingredient[] = [
         new Ingredient('Apple', 5),
         new Ingredient('Tomato', 10)
@@ -12,6 +12,20 @@ export class ShoppingListService {
 
     getIng() {
         return this.Ingredients.slice();
+    }
+
+    getIngWithIndex(i: number) {
+        return this.Ingredients[i];
+    }
+
+    updateIngWithIndex(i: number, a: Ingredient) {
+        this.Ingredients[i].name = a.name;
+        this.Ingredients[i].amount = a.amount;
+    }
+
+    deleteIngWithIndex(i: number) {
+        this.Ingredients.splice(i, 1);
+        this.ingChanged.next(this.Ingredients.slice());
     }
 
     AddIngredient(ingredient: Ingredient) {
@@ -25,6 +39,4 @@ export class ShoppingListService {
     RemoveIngredients() {
 
     }
-
-
 }
