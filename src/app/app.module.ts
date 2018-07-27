@@ -21,6 +21,10 @@ import { OddComponent } from './practice4/odd/odd.component';
 import { EvenComponent } from './practice4/even/even.component';
 import { DropdownDirective } from './shared/dropdown.directive';
 import { Practice5Module } from './practice5/practice5.module';
+import { FilterPipe } from './practice8/pipe/filter.pipe';
+import { SortPipe } from './practice8/pipe/sort.pipe';
+import { ReversePipe } from './practice8/pipe/reverse.pipe';
+import { ShortenPipe } from './practice8/pipe/shorten.pipe';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
 import { AppRoutingModule } from './app-routing.module';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
@@ -28,6 +32,7 @@ import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.compon
 import { TDFormComponent } from './practice6/tdform/tdform.component';
 import { ReactiveFromComponent } from './practice7/reactive-from/reactive-from.component';
 import { RecipeService } from './recipes/recipe.service';
+import { PipeComponent } from './practice8/pipe/pipe.component';
 
 
 
@@ -53,7 +58,12 @@ import { RecipeService } from './recipes/recipe.service';
     RecipeEditComponent,
     RecipeStartComponent,
     TDFormComponent,
-    ReactiveFromComponent
+    ReactiveFromComponent,
+    PipeComponent,
+    FilterPipe,
+    ShortenPipe,
+    ReversePipe,
+    SortPipe
   ],
   imports: [
     BrowserModule,
