@@ -21,7 +21,6 @@ export class TDFormComponent implements OnInit {
   }
 
   submitForm(f: NgForm) {
-    console.log(f);
     this.submitted = true;
   }
 

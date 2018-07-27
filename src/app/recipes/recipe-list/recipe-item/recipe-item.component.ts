@@ -12,7 +12,7 @@ export class RecipeItemComponent implements OnInit {
 
   @Input() xrecipe: Recipe;
 
-  constructor(private recipeService:RecipeService, private router: Router) { }
+  constructor(private recipeService: RecipeService, private router: Router) { }
 
   ngOnInit() {
   }
