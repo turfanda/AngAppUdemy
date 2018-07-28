@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
@@ -33,6 +33,7 @@ import { TDFormComponent } from './practice6/tdform/tdform.component';
 import { ReactiveFromComponent } from './practice7/reactive-from/reactive-from.component';
 import { RecipeService } from './recipes/recipe.service';
 import { PipeComponent } from './practice8/pipe/pipe.component';
+import { DataStoreService } from './shared/data-store.service';
 
 
 
@@ -70,9 +71,10 @@ import { PipeComponent } from './practice8/pipe/pipe.component';
     FormsModule,
     Practice5Module,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [ShoppingListService, RecipeService],
+  providers: [ShoppingListService, RecipeService,DataStoreService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
