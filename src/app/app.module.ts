@@ -34,6 +34,10 @@ import { ReactiveFromComponent } from './practice7/reactive-from/reactive-from.c
 import { RecipeService } from './recipes/recipe.service';
 import { PipeComponent } from './practice8/pipe/pipe.component';
 import { DataStoreService } from './shared/data-store.service';
+import { SignupComponent } from './auth/signup/signup.component';
+import { SigninComponent } from './auth/signin/signin.component';
+import { AuthService } from './auth/auth.service';
+import { AuthGuardService } from './auth/authGuard.service';
 
 
 
@@ -64,7 +68,9 @@ import { DataStoreService } from './shared/data-store.service';
     FilterPipe,
     ShortenPipe,
     ReversePipe,
-    SortPipe
+    SortPipe,
+    SignupComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,
@@ -74,7 +80,7 @@ import { DataStoreService } from './shared/data-store.service';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [ShoppingListService, RecipeService,DataStoreService],
+  providers: [ShoppingListService, RecipeService,DataStoreService,AuthService,AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
