@@ -1,5 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { DropdownDirective } from '../../shared/dropdown.directive';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
@@ -7,14 +7,11 @@ import { DropdownDirective } from '../../shared/dropdown.directive';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
- isOpen=false;
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
   }
-
-  test(event) {
-    this.isOpen = !this.isOpen;
+  navToRecipeBook(){
+    this.router.navigate(['/recipebook']);
   }
-
 }
