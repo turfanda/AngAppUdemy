@@ -19,7 +19,6 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { GameControlComponent } from './practice4/game-control/game-control.component';
 import { OddComponent } from './practice4/odd/odd.component';
 import { EvenComponent } from './practice4/even/even.component';
-import { DropdownDirective } from './shared/dropdown.directive';
 import { Practice5Module } from './practice5/practice5.module';
 import { FilterPipe } from './practice8/pipe/filter.pipe';
 import { SortPipe } from './practice8/pipe/sort.pipe';
@@ -38,6 +37,8 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import { AuthService } from './auth/auth.service';
 import { AuthGuardService } from './auth/authGuard.service';
+import { CoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
 
 
 
@@ -58,7 +59,6 @@ import { AuthGuardService } from './auth/authGuard.service';
     ShoppingEditComponent,
     GameControlComponent,
     OddComponent,
-    DropdownDirective,
     EvenComponent,
     RecipeEditComponent,
     RecipeStartComponent,
@@ -77,8 +77,9 @@ import { AuthGuardService } from './auth/authGuard.service';
     FormsModule,
     Practice5Module,
     AppRoutingModule,
+    CoreModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,SharedModule
   ],
   providers: [ShoppingListService, RecipeService,DataStoreService,AuthService,AuthGuardService],
   bootstrap: [AppComponent]
